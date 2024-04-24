@@ -1,0 +1,8 @@
+Package: git
+Version: 3.1
+Architecture: arm
+Priority: important
+Section: utils
+Depends:
+Maintainer: @termuxdev314
+Description: git xdeb version

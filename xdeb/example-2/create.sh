@@ -7,14 +7,14 @@ postinst
 prerm
 postrm"
 
-for question in ${questions}: do
+for question in ${questions}; do
 	ask="${question}
 	would you add a ${question}
 	[y/n]"
 	echo "${ask}"
 	read choice
 	case ${choice} in
-		y|Y|*)
+		y|Y)
 			nvim git-xdeb/DEBIAN/${question}
 			chmod 755 git-xdeb/DEBIAN/${question}
 			;;
@@ -35,5 +35,5 @@ Description:
 EOF
 nvim git-xdeb/DEBIAN/control
 chmod 755 git-xdeb/DEBIAN/
-bsdtar -cf git.xdeb python-xdeb/*
+bsdtar -cf git-3_11_8.xdeb python-xdeb/*
 exit 0

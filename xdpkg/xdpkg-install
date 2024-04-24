@@ -1,0 +1,10 @@
+#!/bin/bash
+
+file="$1"
+
+bsdtar -xf "$file" 
+chmod 755 *-xdeb/DEBIAN
+printf "Build ${file}..." && dpkg-deb &>/dev/null -b *-xdeb && echo "✓"
+printf "Install ${file}..." && dpkg -i --force-overwrite *.deb &>/dev/null && echo "✓"
+rm *.deb
+rm -rf *-xdeb
