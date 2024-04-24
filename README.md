@@ -1,2 +1,2 @@
 # WIKI
-[Wiki](https://github.com/termuxdev314/xdpkg-tools.wiki.git)
+[Wiki](https://github.com/termuxdev314/xdpkg-tools/wiki)
